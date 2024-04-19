@@ -157,7 +157,7 @@ gsap.to(".boxs", {
 })
 
 gsap.from("#dust",{
-    y: 50,
+    y: 20,
     duration:2.5,
     ease: "bounce.out",
 })
@@ -170,14 +170,14 @@ Shery.mouseFollower({
   });
 
   
-Shery.textAnimate(".mainhead" /* Element to target.*/, {
-    //Parameters are optional.
-    style:2,
-    y: 10,
-    x:10,
-    delay: 4,
-    duration: 2,
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    multiplier: 0.1,
-  });
+// Shery.textAnimate(".mainhead" /* Element to target.*/, {
+//     //Parameters are optional.
+//     style:2,
+//     y: 10,
+//     x:10,
+//     delay: 4,
+//     duration: 2,
+//     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+//     multiplier: 0.1,
+//   });
 
