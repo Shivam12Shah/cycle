@@ -126,11 +126,11 @@ document.getElementById('page1').addEventListener('mousemove', function (event) 
     }
 });
 
-Shery.makeMagnet("#dust" /* Element to target.*/, {
-    //Parameters are optional.
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    duration: 1,
-  });
+// Shery.makeMagnet("#dust" /* Element to target.*/, {
+//     //Parameters are optional.
+//     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+//     duration: 1,
+//   });
 
 Shery.imageEffect(".c", {
     style: 1 /*OR 5 for different variant */,
