@@ -1,6 +1,6 @@
 @font-face {
   font-family: baby;
-  src: url('./WFVisualSans-RegularText-46461986901f80620e484e70aa8cbb90ede25a01351d464819a4e47a3f38ea43.woff2');
+  src: url('./MADE\ Bon\ Voyage\ Thin\ PERSONAL\ USE.otf');
 }
 @font-face{
   font-family:raju;
@@ -15,21 +15,68 @@
   cursor: none;
   padding: 0.1px;
 }
-
+#main{
+  width: 100%;
+  background-color: black;
+}
 .page1 {
   width: 100%;
   height: 100vh;
   background-color: #161616;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
+#heading{
+  width: 100%;
+  height: fit-content;
+  padding: 3px 0px 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #9e9e9e;
+  position: absolute;
+  bottom: 0;
+}
+#heading2{
+  width: 100%;
+  height: fit-content;
+  padding: 3px 0px 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #9e9e9e;
+
+}
+#heading h1{
+
+  display: inline-block;
+  font-size: 2vw;
+  font-family: raju;
+  font-weight: 400;
+  animation-name: ltor;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+}
+.page2 #heading2 h1{
+
+  display: inline-block;
+  font-size: 2vw;
+  font-family: raju;
+  font-weight: 400;
+  animation-name: ltor;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 #dust {
   width: 150%;
   height: 50%;
   object-fit: cover;
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
+  mix-blend-mode: luminosity;
+
 
 }
 
@@ -45,6 +92,14 @@
 .links {
   display: flex;
   gap: 25px;
+}
+.links a{
+  font-size: 14px;
+  font-weight: 600;
+  
+  font-family: baby;
+  /* text-transform: uppercase; */
+
 }
 
 #canvas-container {
@@ -71,35 +126,45 @@
 #canvas-container canvas img {
   width: 100%;
   height: 100%;
+  margin-left: 200px;
   object-fit: cover;
 }
 
 .mainhead {
-  color: white;
-  font-size: 10vh;
-  line-height: 10vh;
+  width: 75%;
+  color: rgba(82, 82, 82, 0.019);
+  font-size: 5.5vw;
+  line-height: 5vw;
+  font-weight: 100;
   text-transform: uppercase;
+  -webkit-text-stroke:  1px rgb(244, 244, 244);
   font-family: raju;
+  mix-blend-mode: difference;
 }
-
+.strech{
+  font-feature-settings: "liga";
+}
 .slider::-webkit-scrollbar {
   display: none;
 }
 
-#dust {
-  mix-blend-mode: luminosity;
-}
+
 .discritop p{
   padding-top: 20px;
   color: whitesmoke;
 }
+
+.discritop{
+  width: 25%;
+}
 .page1-bottom {
   position: absolute;
   display: flex;
-  bottom: 50px;
+  bottom: 100px;
   padding: 0px 50px;
   gap: 20px;
-  align-items: center;
+
+  align-items: end;
 }
 .button{
   display: flex;
@@ -108,11 +173,21 @@
 
 }
 .button h1{
-  background-color: white;
+  color: white;
+  border: white 1px solid;
   padding: 5px 20px;
   border-radius: 20px;
   width: fit-content;
 } 
+@keyframes ltor {
+  0%{
+      transform: translateX(0%);
+  }
+  100%{
+      transform: translateX(-100%);
+
+  }
+}
 
 /* 
 
@@ -125,27 +200,41 @@
 }
 
 .page2{
-  height: 100vh;
+  background:#161616;
   width: 100%;
+  height: 100vh;
+  position: relative;
   
 }
-
+#dust2{
+  width: 150%;
+  height: 50%;
+  object-fit: cover;
+  position: absolute;
+  /* opacity: 200%; */
+  rotate: 180deg;
+  mix-blend-mode: luminosity;
+}
+.page2-overlay{
+  width: 100%;
+  top: 0;
+}
 .wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70%;
+  height: 70vh;
 }
 
 .items{
   display: flex;
   gap: 0.4rem;
-  perspective: calc(var(--index) * 35);
+  perspective: calc(var(--index) * 32);
 }
 
 .item{
   width: calc(var(--index) * 4);
-  height: calc(var(--index) * 17);
+  height: calc(var(--index) * 16);
   background-color: #222;
   background-size: cover;
   background-position: center;
@@ -228,9 +317,13 @@ z-index: 100;
 transform: translateZ(calc(var(--index) * 10));
   margin: 0 .45vw;
 }
-.page2 h1{
+.page2-overlay h1{
   margin-left: 50px; 
-  margin-top: 10px;
-  font-size: 10vh;
+  font-size: 2vw;
   font-weight: 600;
+  font-family: raju;
+  margin-top: 50px;
+  color: white;
+  /* -webkit-text-stroke: .5px white; */
+  text-transform: uppercase;
 }
