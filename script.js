@@ -137,24 +137,17 @@ Shery.imageEffect(".c", {
     debug: true,
 });
 
-gsap.from(".cont", {
-    duration: 2.5,
-    ease: "bounce.out",
-    y: -500
-});
+// gsap.from(".cont", {
+//     duration: 2.5,
+//     ease: "bounce.out",
+//     y: -500
+// });
 
-gsap.to(".boxs", {
-    x: "-50%",
-    scrollTrigger: {
-        trigger: ".page3",
-        scroller: "#main",
-        start: "top 0%",
-        end: "top -100%",
-        // markers: true,
-        pin: true,
-        scrub: 1
-    }
-})
+Shery.imageEffect(".logimg", {
+    style: 2,
+    debug: true,
+  });
+
 
 gsap.from("#dust",{
     y: 20,
@@ -170,6 +163,11 @@ Shery.mouseFollower({
   });
 
   
+  Shery.makeMagnet(".links" /* Element to target.*/, {
+    //Parameters are optional.
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: .3,
+  });
 
 let menubar = 0
 document.querySelector(".links").addEventListener("click", ()=>{
@@ -279,3 +277,31 @@ class TextScramble {
   
   next()
   
+
+  gsap.to(".page2-overlay", {
+    
+    scrollTrigger: {
+        trigger: ".page2",
+        scroller: "#main",
+        start: "top 0%",
+        end: "40% 20%",
+        // markers: true,
+        pin: true,
+  
+    }
+})
+
+
+
+gsap.to(".boxs", {
+  x: "-50%",
+  scrollTrigger: {
+      trigger: ".page3",
+      scroller: "#main",
+      start: "top 0%",
+      end: "top -100%",
+      // markers: true,
+      pin: true,
+      scrub: 1
+  }
+})
